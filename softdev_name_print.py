@@ -5,14 +5,17 @@ def printNames(period, index):
     with open('softdev_students_pd1.txt') as reader:
         name = reader.readline()
         while name != '':
-            pd1.append(name)
+            pd1.append(name.rstrip('\n'))
             name = reader.readline()
 
     with open('softdev_students_pd2.txt') as reader:
         name = reader.readline()
         while name != '':
-            pd2.append(name)
+            pd2.append(name.rstrip('\n'))
             name = reader.readline()
+    pd1.sort()
+    pd2.sort()
+
 
     if period == 1:
         if index < len(pd1):
