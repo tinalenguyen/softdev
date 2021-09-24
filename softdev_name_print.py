@@ -1,6 +1,6 @@
 #Tina Nguyen
 #SoftDev
-#K03 -- Printing SoftDev Student Names
+#K04 -- Printing SoftDev Student Names
 #2021-09-22
 
 def printNames(period, index):
