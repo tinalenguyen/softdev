@@ -25,7 +25,7 @@ import sys
 # If the second argument is "random", the output is a random name from that period
 # If the second argument is a number, the output is a name that corresponds with that index in the alpabetical lsit
 
-# A tuple to represent all softdev periods:
+# A tuple to represent all softdev periods: a tuple stores multiple items in one variable
 usedPeriods = (1, 2) # Add more periods here (eg. `(1, 2, 5, 9)`) if necessary
 
 # Using a dict to store the mapping between period #'s and lists of names
@@ -60,8 +60,8 @@ def initNameList():
                 pd.append(name)
 
         pd.sort(key=alphSortKey)
-        nameLists[i] = pd
-        allNames.extend(pd)
+        nameLists[i] = pd # adds to specific period
+        allNames.extend(pd) # adds to all the names
 
 def printRandomName():
     print(random.choice(allNames))
@@ -82,22 +82,22 @@ def tryParseInt(s):
 
 def main():
     initNameList()
-    if 1 >= len(sys.argv):
+    if 1 >= len(sys.argv): #checks for first argument
         exitWithError(f"missing required argument #1")
-    if sys.argv[1] == 'random':
+    if sys.argv[1] == 'random': # outputs random name from both periods
         printRandomName()
     else:
         periodNum = tryParseInt(sys.argv[1])
-        if periodNum not in usedPeriods:
+        if periodNum not in usedPeriods: # checks if period number exists
             exitWithError(f"invalid period number {periodNum}")
 
         nameList = nameLists[periodNum]
-        if 2 >= len(sys.argv):
+        if 2 >= len(sys.argv): # checks for argument 2
             exitWithError(f"missing required argument #2")
         if sys.argv[2] == 'random':
             print(random.choice(nameList))
         else:
-            nameIdx = tryParseInt(sys.argv[2])
+            nameIdx = tryParseInt(sys.argv[2]) # checks for invalid student index in specified period
             if nameIdx >= len(nameList) or nameIdx < -len(nameList):
                 exitWithError(f"invalid student number {nameIdx} of period {periodNum}")
             print(nameList[nameIdx])
