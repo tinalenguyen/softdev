@@ -15,9 +15,9 @@ within a single project. Within a virtual environment, programs will have
 access to only the modules installed in the virtual environment directory,
 allowing programmers to manage and update package versions.
 
-A package may contain methods that can make coding more efficient. Importing
-a method from a package can make your code more concise. You would get these
-packages from pypi.org.
+A package contains modules which are Python files, and they have potentially
+useful methods in them. Those methods could save you from writing thousands
+of lines of code. You would get these packages from https://pypi.org.
 
 Why do we use virtual environments? It's super helpful to be able to keep all
 of the dependencies (the packages a project uses) in one place, where we can
