@@ -2,6 +2,7 @@
 
 Pasta Noodles - Christopher Liu, Tami Takada, Tina Nguyen </br>
 SoftDev </br>
+K07 -- README for K06
 2021-09-29
 
 ## File I/O
@@ -56,13 +57,13 @@ list(occupations.keys())
 
 ## Weighted Randomized Selection
 
-The goal of this program is to choose an occupation randomly while the results 
-are weighted by their corresponding percentages. 
+The goal of this program is to choose an occupation randomly while the results
+are weighted by their corresponding percentages.
 
-We added an "other" category since the total percentage was 99.8% instead of 100%, 
-so the "other" category has a percentage of 0.2%. There are 22 occupations total 
-(23 if we include the "other" category) and each is weighted by its corresponding 
-percentage. For example, the percentage associated with Sales is 10.2%, so that means 
+We added an "other" category since the total percentage was 99.8% instead of 100%,
+so the "other" category has a percentage of 0.2%. There are 22 occupations total
+(23 if we include the "other" category) and each is weighted by its corresponding
+percentage. For example, the percentage associated with Sales is 10.2%, so that means
 that it has a 10.2% chance of being selected. If the results were not weighted, then
 each category would have a 1/23 chance of being the result.
 
@@ -76,7 +77,7 @@ random.choices(sequence, weights = (weighted values in a list))
 ```
 
 We converted the keys (job classes) and the values (percentages) of the dictionary
-to lists to use in random.choices(). 
+to lists to use in random.choices().
 
 ```
 job_classes = list(occupations.keys())
