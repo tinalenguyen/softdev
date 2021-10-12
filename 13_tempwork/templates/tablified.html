@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weighted Random Occupation Selector</title>
+    </head>
+    <body>
+        <h1>Weighted Random Occupation Selector</h1>
+        <h2>
+            Wanderers: Shriya Anand, Lucas Lee, Tina Nugget <br>
+            SoftDev <br>
+            K13 -- Occupation Flask App Template <br>
+            2021-10-13
+        </h2>
+
+        <strong>Random choice: {{choice}}</strong>
+        <hr>
+        <table>
+            <tr>
+
+                <td><strong>Occupation</strong></td>
+                <td><strong>Percentage</strong></td>
+
+            </tr>
+
+            {%for occupation, percentage in occupations.items()%}
+            <tr>
+                <td>{{occupation}}</td>
+                <td>{{percentage}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+
+    </body>
+</html>
