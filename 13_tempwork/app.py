@@ -14,6 +14,14 @@ app = Flask(__name__)  # create instance of class Flask
 
 @app.route("/occupyflaskst")  # assign fxn to route
 def display_occupation():
+<<<<<<< HEAD
+    """
+    Creates a site at /occupyflaskst serving a template displaying the information in ./data/occupations.csv along with a randomly selected job
+    """
+
+
+=======
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
     jobs = occupations.read_occupations("./data/occupations.csv")
     # creates dictionary called jobs which is a dictionary returned
     # from read_occupations() which reads through occupations.csv and makes the

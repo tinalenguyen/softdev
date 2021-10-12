@@ -1,0 +1,32 @@
+"""
+Wanderers: Shriya Anand, Lucas Lee, Tina Nugget
+SoftDev
+K13 -- Occupation Flask App Template
+2021-10-13
+"""
+
+In order to access files such as the occupations.csv or occupations.py we had to
+use "./data/occupations.csv" to indicate the location of the files.
+
+In the app file, we simply ran the functions from the occupations.py file.
+
+It creates a dictionary containing occupations as keys and a tuple containing
+percentages and links as values.
+
+A tuple had to be used since each key was associated with multiple values, and
+we bundled them together into a tuple.
+
+We made sure that the route was /occupyflaskst.
+
+Once we got the dictionary of jobs and randomly chosen occupation, we were able
+to input this data into the 'tablified.html' template using render_template.
+
+Using a for loop, we created a table with rows displaying occupations,
+percentages, and clickable links that corresponded to what random occupation was
+chosen.
+
+
+EGO:
+
+The main point is to be receptive about advice/correction and not get defensive
+if you make an error or are confused about something.

@@ -12,13 +12,31 @@
             2021-10-13
         </h2>
 
+<<<<<<< HEAD
+        <strong>Random choice: {{choice}}</strong><br>
+        <a href="{{occupations[choice][1]}}">Helpful Link!</a>
+
+        <hr>
+        <table style="border-spacing: 20px 0">
+=======
         <strong>Random choice: {{choice}}</strong>
         <hr>
         <table>
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
             <tr>
 
                 <td><strong>Occupation</strong></td>
                 <td><strong>Percentage</strong></td>
+<<<<<<< HEAD
+                <td><strong>Link</strong></td>
+            </tr>
+
+            {%for occupation, tuple in occupations.items()%}
+            <tr>
+                <td>{{occupation}}</td>
+                <td>{{tuple[0]}}</td>
+                <td><a href="{{tuple[1]}}">{{tuple[1]}}</a></td>
+=======
 
             </tr>
 
@@ -26,6 +44,7 @@
             <tr>
                 <td>{{occupation}}</td>
                 <td>{{percentage}}</td>
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
             </tr>
             {%endfor%}
         </table>

@@ -48,17 +48,41 @@ def read_occupations(filename: str) -> dict:
         for row in reader:
             job_class = row[0]
             percentage = row[1]
+<<<<<<< HEAD
+            link = row[2]
+
+            occupations[job_class] = (float(percentage), link) # Creates tuple of the percentage and links
+
+    # We mark everything not in the occupations list as "Other".
+    total_percentage = occupations["Total"][0]
+    occupations["Other"] = (round(100 - total_percentage, 1), occupations['Total'][1]) # Rounds to 1 decimal point
+=======
             occupations[job_class] = float(percentage)
 
     # We mark everything not in the occupations list as "Other".
     total_percentage = occupations["Total"]
     occupations["Other"] = round(100 - total_percentage, 1) # Rounds to 1 decimal point
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
     del occupations["Total"]
 
     return occupations
 
 
 def choose_from_dict(occupations: dict) -> str:
+<<<<<<< HEAD
+    """
+    Picks an occupation randomly using the percentage weights in the given
+    occupations dictionary.
+    """
+
+    job_classes = list(occupations.keys())
+    tuples = list(occupations.values())
+    percentages = [t[0] for t in tuples] # Gets only the first element of each tuple in the list
+
+
+    choice = random.choices(job_classes, weights=percentages)[0]
+
+=======
     """Picks an occupation randomly using the percentage weights in the given
     occupations dictionary."""
 
@@ -66,12 +90,20 @@ def choose_from_dict(occupations: dict) -> str:
     percentages = list(occupations.values())
 
     choice = random.choices(job_classes, weights=percentages)[0]
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
     return choice
 
 
 def random_occupation(filename: str) -> str:
+<<<<<<< HEAD
+    """
+    Returns a random occupation based on the job classes and percentage
+    weights provided in the given CSV file.
+    """
+=======
     """Returns a random occupation based on the job classes and percentage
     weights provided in the given CSV file."""
+>>>>>>> 5034a681273663a54bb68e453aa1bf57f6f8df4e
 
     occupations = read_occupations(filename)
     return choose_from_dict(occupations)
