@@ -6,3 +6,6 @@ K15: Sessions Greeting
 - we added a section for the user to type a password in
 - if you make the type of input "password," the text in the box would display as stars and stay hidden
 - we made a unique login combo, and if the username and password doesn't match that combo an error will pop up
+- there's an error for when nothing is inputted in either the username or password box
+- we made the error text red in login.html
+- the logout button is a button that redirects the user to the original login page
