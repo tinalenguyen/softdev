@@ -37,6 +37,7 @@ def disp_loginpage():
     # print("***DIAG: request.headers ***")
     # print(request.headers)
     return render_template( 'login.html' )
+    # HTML text that's a template for logging in
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
@@ -48,10 +49,15 @@ def authenticate():
     # print(request)
     # print("***DIAG: request.args ***")
     # print(request.args)
+
+    #prints username and headers in the terminal
     print("***DIAG: request.args['username']  ***")
     print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+
+    #authenicate will go to the response page which will use response.html
+    #we set username here so that it can be used in response.html in our greeting
     return render_template( 'response.html', username=request.args['username'])  #response to a form submission
 
 
