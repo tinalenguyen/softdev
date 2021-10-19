@@ -9,3 +9,5 @@ K15: Sessions Greeting
 - there's an error for when nothing is inputted in either the username or password box
 - we made the error text red in login.html
 - the logout button is a button that redirects the user to the original login page
+- the user stays in the same session if they open another tab with the site, even if they close the current tab. the session will only end once the user logs out
+- once the user logs out, the username is reset to None and the session pops, sending the user to the login page again
