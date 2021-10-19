@@ -16,7 +16,7 @@ import os
 
 from flask import session
 app = Flask(__name__)    #create Flask object
-app.secret_key = os.urandom(32)
+app.secret_key = os.urandom(32) #creates random alphanumeric code
 
 
 
@@ -37,13 +37,19 @@ def disp_loginpage():
     # print(request.args['username'])
     # print("***DIAG: request.args['password']  ***")
     # print(request.args['password'])
-     if ("username" != None):
+     if (session.get("username") != None):
+         # if there's an existing session, shows welcome page
         return render_template( 'response.html', username=session.get("username"))
-     return render_template( 'login.html' )
+     return render_template('login.html' )
+     #shows login page
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
+    '''
+    Function for logging in. Checks if the user input matches the hard coded
+    login info and reports back what errors there are. 
+    '''
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
     # print(app)
@@ -61,6 +67,7 @@ def authenticate():
 
     myuser="settingthebar"
     mypass="intertoobz"
+    #hardcoded login info
 
     #authenicate will go to the response page which will use response.html
     #we are retrieving entered username and password here
@@ -73,11 +80,11 @@ def authenticate():
     #     return render_template( 'response.html', username=request.args['username'], password=request.args['password'])  #response to a form submission
     # except if ((username!=myuser or password!=mypass)):
     #     return render_template( 'login.html' )
-    #app.config['secret_key'] = os.urandom(32)
-    if (username==myuser and password==mypass):
+
+    if (username==myuser and password==mypass): # if login info matches
         session["username"] = username
         return render_template( 'response.html', username = session["username"])
-    elif (username=="" or password==""):
+    elif (username=="" or password==""): # checks for blank inputs
         return render_template('login.html', error="Cannot submit blank username or password")
     elif (username!=myuser):
         return render_template('login.html', error="Incorrect username")
@@ -86,10 +93,13 @@ def authenticate():
 
 @app.route("/logout")
 def logout():
-    #if "username" in session:
+    '''
+    Function for the logout button. Sets username to  None and pops the session,
+    then returning to the login page.
+    '''
     session["username"] = None
     session.pop("username", None)
-    return render_template('login.html')
+    return disp_loginpage()
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
