@@ -1,0 +1,31 @@
+Setting the Bar: Ella Krechmer, Shyne Choi, Tina Nguyen
+SoftDev
+K17 - Notes from K16 Code Tour
+2021-10-25
+Time Spent: 15 min
+
+Text Box
+- used c.executemany, no for loop, creates an array that gets directly inserted
+
+Team Snaps
+- newline can cause problems within systems
+- separating each value and then creating one concatenated string
+
+CircleTable
+- removing tables if they already exist (DROP TABLE)
+- made a read_data function
+- also used executemany
+
+Team02
+- tuple=list that you aren't allowed to change
+- do not insert if it is already in the table (accounts for duplicates)
+
+Team Toast
+- also used DROP TABLE but with try except
+
+Forgotten Charger
+- also used DROP TABLE
+- f string=you can use brackets to put in the parts you need, no need to concatenate (f stands for format)
+
+The Onions
+- created helper functions printDB and dict2SQ
