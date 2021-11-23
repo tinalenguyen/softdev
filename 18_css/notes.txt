@@ -6,7 +6,9 @@ time spent: 1 hour
 - we used cat ipsum text
 
 - for the inline type HTML file, there were a lot of lines with style text
-- for the external type HTML file, we imported an external file with CSS styles in it
+- for the external type HTML file, we imported an external file with CSS in it
+  - in the CSS file, there were lines formatting columns
+  - this file was called "style.css"
 - for the internal type HTML file, there was a paragraph for each column
   - elements seemed to be divided by columns
     - column 1 was just the side elements
