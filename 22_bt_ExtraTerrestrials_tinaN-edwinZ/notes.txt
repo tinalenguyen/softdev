@@ -1,0 +1,6 @@
+# ExtraTerrestrials (Edwin Zheng, Tina Nguyen)
+# SoftDev
+# K19 - A RESTful Journey Skyward
+# 2021-11-23
+
+- some features require JavaScript which needs util.js (a file the website provides)
