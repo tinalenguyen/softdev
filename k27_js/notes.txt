@@ -1,0 +1,17 @@
+// Team TuRNeR : Tina Nguyen, Rayat Roy
+// SoftDev pd1
+// K27 -- Basic functions in JavaScript
+// 2022-02-03
+
+DISCO
+
+* using javascript, we could only do (var example = (n) => blah) and not the
+other example on the board.
+
+
+QCC
+-----------------------------------------------------------------
+* why didn't the other method on the board work?
+=================================================================
+
+var fxnName = function(args) wasn't liked by firefox it gave the error that the { was missing even though it was not
