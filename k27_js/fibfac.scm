@@ -25,5 +25,6 @@
     )
   )
 
-(fib 10)
-(fact 3)
+;TESTING -- UNCOMMENT TO RUN
+;(fib 10)
+;(fact 3)
